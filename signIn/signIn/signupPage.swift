@@ -1,6 +1,6 @@
 //
-//  signInApp.swift
-//  signIn
+//  SignupPage.swift
+//  SignupPage
 //
 //  Created by Safan on 2023-08-09.
 //
