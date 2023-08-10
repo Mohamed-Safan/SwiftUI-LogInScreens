@@ -1,3 +1,10 @@
+//
+//  signInApp.swift
+//  signIn
+//
+//  Created by Safan on 2023-08-09.
+//
+
 import SwiftUI
 import AuthenticationServices
 
@@ -43,7 +50,7 @@ struct SignInView: View {
                     .shadow(color: Color.black.opacity(0.3), radius: 3, x: 0, y: 3)
                 
                 Button(action: {
-                    // Sign-in button action
+                    // Signin button
                 }) {
                     Text("Sign In")
                         .foregroundColor(.white)
@@ -77,12 +84,12 @@ struct SignInView: View {
                 
                 VStack {
                     Button(action: {
-                        // Google Sign-In action
+                        // Google SignIn 
                     }) {
                         Image("googleimg")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 300, height: 60) // Increased width and height
+                            .frame(width: 300, height: 60) // width and height
                             .padding()
                       
                           
@@ -92,12 +99,12 @@ struct SignInView: View {
                     
                     
                     Button(action: {
-                        // Apple Sign-In action
+                        // Apple SignIn 
                     }) {
-                        Image("appleimg") // Replace with your Apple icon image
+                        Image("appleimg") 
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 245, height: 100) // Increased width and height
+                            .frame(width: 245, height: 100) // width and height
                             .padding(.bottom,60)
                            
                           
