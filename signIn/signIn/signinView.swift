@@ -1,6 +1,6 @@
 //
-//  signInApp.swift
-//  signIn
+//  SignInView.swift
+//  SignInView
 //
 //  Created by Safan on 2023-08-09.
 //
