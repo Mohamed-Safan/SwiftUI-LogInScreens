@@ -1,3 +1,10 @@
+//
+//  splashScreen.swift
+//  splashScreen
+//
+//  Created by Safan on 2023-08-09.
+//
+
 import SwiftUI
 
 struct SplashScreenView: View {
@@ -6,14 +13,13 @@ struct SplashScreenView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Image("bgimg") // Use "bgimg" as the background image
-                    .resizable()
+                Image("bgimg") 
                     .aspectRatio(contentMode: .fill)
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack {
                     
-                    Text("GreenThumb") // Beautiful text at the top
+                    Text("GreenThumb") 
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(.white)
@@ -28,25 +34,25 @@ struct SplashScreenView: View {
                     
                     if isActive {
                         NavigationLink(
-                            destination: SignInView(), // Navigate to SignInView
+                            destination: SignInView(), // Navigate  SignInView
                             isActive: $isActive
                         ) {
-                            EmptyView() // Use an EmptyView as the link label
+                            EmptyView() /
                         }
                         .navigationBarHidden(true)
                     } else {
                         VStack {
                             ProgressView()
                                 .progressViewStyle(CircularProgressViewStyle(tint: .green))
-                                .scaleEffect(2) // Make the loading circle larger
-                                .padding(.top, -10) // Move it slightly more to the top
+                                .scaleEffect(2) 
+                                .padding(.top, -10) 
                         }
                     }
                 }
             }
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                    isActive = true // Activate the NavigationLink
+                    isActive = true 
                 }
             }
         }
