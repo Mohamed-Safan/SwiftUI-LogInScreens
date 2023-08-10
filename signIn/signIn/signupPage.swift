@@ -1,14 +1,21 @@
+//
+//  signInApp.swift
+//  signIn
+//
+//  Created by Safan on 2023-08-09.
+//
+
 import SwiftUI
 
 struct SignUpView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var name = ""
-    @State private var isSignInActive = false // State for navigation
+    @State private var isSignInActive = false 
     
     var body: some View {
         ZStack {
-            Image("signimg") // Background image "signupimg"
+            Image("signimg") // Background image 
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .edgesIgnoringSafeArea(.all)
@@ -52,7 +59,7 @@ struct SignUpView: View {
                     .shadow(color: Color.black.opacity(0.3), radius: 3, x: 0, y: 3)
                 
                 Button(action: {
-                    // Sign-up button action
+                   
                 }) {
                     Text("Sign Up")
                         .foregroundColor(.white)
@@ -73,7 +80,7 @@ struct SignUpView: View {
                     }
                     .foregroundColor(.white)
                     .sheet(isPresented: $isSignInActive) {
-                        SignInView() // Show SignInView
+                        SignInView() // navig SignInView
                     }
                 }
                 .padding(.horizontal)
